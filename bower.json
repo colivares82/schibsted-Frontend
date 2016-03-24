@@ -1,0 +1,33 @@
+{
+  "name": "frontend-test",
+  "version": "1.0.0",
+  "authors": [
+    "Carlos Olivares <carlos.olivares.ve@gmail.com>"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "jquery": "~2.1.4",
+    "angular-animate": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "animate.css": "~3.4.0",
+    "angular-ui-router": "~0.2.15"
+  },
+  "description": "Frontend Test for Schibsted",
+  "main": "app.js",
+  "keywords": [
+    "frontend",
+    "angular",
+    "Schibsted"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "cdn": {
+    "jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js",
+    "angular": "//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js",
+    "angular-animate": "//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.js"
+  }
+}

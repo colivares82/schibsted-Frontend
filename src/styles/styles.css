@@ -1,0 +1,153 @@
+@import "suitcss-base";
+
+@import "suitcss-utils-align";
+@import "suitcss-utils-display";
+@import "suitcss-utils-layout";
+@import "suitcss-utils-link";
+@import "suitcss-utils-offset";
+@import "suitcss-utils-position";
+@import "suitcss-utils-size";
+@import "suitcss-utils-text";
+
+@import "suitcss-components-arrange";
+@import "suitcss-components-button";
+@import "suitcss-components-flex-embed";
+@import "suitcss-components-grid";
+
+/*@import "./var-definitions";*/
+
+
+:root {
+  --base-color: inherit;
+  --base-font: 16px sans-serif;
+  --base-link-color: #069;
+  --base-link-color-hover: #069;
+
+  --Arrange-gutter-size: 10px;
+
+  --Button-border-width: 1px;
+  --Button-border-color: currentcolor;
+  --Button-color: inherit;
+  --Button-font: inherit;
+  --Button-padding: 0.4em 0.75em;
+  --Button-disabled-opacity: 0.6;
+
+  --Grid-font-size: 1rem;
+  --Grid-gutter-size: 10px;
+}
+
+/***********************************/
+/**********  TRANSITIONS ***********/
+/***********************************/
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/***********************************/
+/*********  GENERAL STYLE **********/
+/***********************************/
+
+.SiteWrapper {
+  min-height:100%;
+  position:relative;
+}
+
+/***********************************/
+/*************  HEADER *************/
+/***********************************/
+
+.Header-container {
+  background-color: #00518f;
+  height: 135px;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+  animation: fadein 1s;
+  font-weight: 100;
+  text-align: right;
+}
+
+.Header-schibstedLogo--container {
+  background-color: #ffffff;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.Header-schibstedLogo--image {
+  height: 115px;
+  width: 86px;
+}
+
+.Header-nav {
+  padding-top: 60px;
+}
+.Header-nav--list {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Header-nav--item {
+  display: inline;
+  margin-right: 20px;
+}
+
+.Header-nav--link {
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+
+.Header-nav--link:hover {
+  font-size: 14px;
+}
+
+.activeLink {
+  font-weight: 500;
+  font-size: 14;
+}
+
+
+/***********************************/
+/*******  BODY - MAIN - BASE  ******/
+/***********************************/
+
+.Main-container {
+  top: 135px;   /* Header height */
+  bottom: 20px; /* Footer height */
+  width: 100%;
+  padding-bottom: 300px;
+}
+
+/***********************************/
+/*************  FOOTER  ************/
+/***********************************/
+
+.Footer-container {
+  background:#029bc3;
+  width:100%;
+  height:300px;
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+
+
+/***********************************/
+/***********  SOLUTION  ************/
+/***********************************/
+
+
+
+.activeSection {
+  display: inline-block;
+}
+
+.inactiveSection {
+  display: none;
+}

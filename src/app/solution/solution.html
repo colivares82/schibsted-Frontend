@@ -1,0 +1,30 @@
+<div class="Grid Grid--withGutter">
+  <div class="Grid-cell u-size8of12 u-before2of12 u-after2of12">
+    <h1>Solution</h1>
+  </div>
+  <div class="Grid-cell u-size2of12 u-before2of12">
+    <p>Number of Articles</p>
+  </div>
+  <div class="Grid-cell u-size6of12 u-after2of12">
+    <p>
+     {{Solution.payload.MockData.length}}
+    </p>
+  </div>
+  <div class="Grid-cell u-size2of12 u-before2of12">
+    <p>Add New Article</p>
+  </div>
+  <div class="Grid-cell u-size6of12 u-after2of12">
+    here comes the form
+  </div>
+  <div class="Grid-cell u-size8of12 u-before2of12 u-after2of12">
+    <dl ng-repeat="items in Solution.payload.MockData">
+      <dt ng-click="Solution.setActiveSection(items.id)">{{::items.title}}</dt>
+      <dd ng-class="{'activeSection': Solution.isActiveSection(items.id),
+          'inactiveSection': !Solution.isActiveSection(items.id)}">
+        <p>{{::items.content}}</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+
+

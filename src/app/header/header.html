@@ -1,0 +1,29 @@
+<section class="Header Grid Grid--fit Grid--withGutter">
+  <div class="Grid-cell u-size1of6 u-before1of6">
+    <div class="Header-schibstedLogo--container" ui-sref="landing">
+      <img class="Header-schibstedLogo--image" src="/assets/schibsted_logo.svg" alt="Schibsted">
+    </div>
+  </div>
+  <div class="Grid-cell u-size3of6 u-after1of6">
+    <nav class="Header-nav">
+      <ul class="Header-nav--list">
+        <li class="Header-nav--item">
+          <a class="Header-nav--link"
+            ui-sref="requirements"
+            ng-class="{'activeLink': Header.isActiveLink('requirements')}">Requirements</a>
+        </li>
+        <li class="Header-nav--item">
+          <a class="Header-nav--link"
+            ui-sref="solution"
+            ng-class="{'activeLink': Header.isActiveLink('solution')}">Solution</a>
+        </li>
+        <li class="Header-nav--item">
+          <a class="Header-nav--link"
+            ui-sref="issues"
+            ng-class="{'activeLink': Header.isActiveLink('issues')}">Issues</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+

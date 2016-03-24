@@ -1,0 +1,27 @@
+<html ng-app="schibsted.frontendTest">
+  <head>
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js'></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <script src='//cdn.jsdelivr.net/lodash/4.6.1/lodash.min.js'></script>
+    <link rel="shortcut icon" href="http://www.schibsted.com/web/images/favicon.ico">
+    <meta charset="utf-8"/>
+    <title>Schibsted Frontend Test</title>
+
+    <script src="app/app.js"></script>
+    <script src="app/header/headerCtrl.js"></script>
+    <script src="app/solution/solutionCtrl.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css">
+  </head>
+
+  <body>
+    <div class="SiteWrapper">
+     <div ui-view></div>
+    </div>
+  </body>
+
+</html>
+
