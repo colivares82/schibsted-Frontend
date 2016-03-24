@@ -1,8 +1,6 @@
 .DS_STORE
 src/vendor
-coverage
 node_modules
 dev
-dist
 npm-debug.log
 .project
