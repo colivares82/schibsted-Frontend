@@ -1,6 +1,2 @@
 .DS_STORE
-src/vendor
-node_modules
 dev
-npm-debug.log
-.project
