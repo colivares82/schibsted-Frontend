@@ -1,7 +1,6 @@
 // gulp
 var gulp = require('gulp');
 var sass = require('gulp-suitcss');
-var inject = require('gulp-inject');
 var connect = require('gulp-connect');
 
 

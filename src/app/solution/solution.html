@@ -1,30 +1,62 @@
-<div class="Grid Grid--withGutter">
-  <div class="Grid-cell u-size8of12 u-before2of12 u-after2of12">
-    <h1>Solution</h1>
+<form name="Solution.newArticle"
+  ng-submit="Solution.CreateNewArticle(Solution.new)"
+  novalidate>
+  <div class="Grid Grid--withGutter Pad--t2">
+    <div class="Grid-cell u-size8of12 u-before2of12 u-after2of12">
+      <h1>Solution</h1>
+    </div>
+    <div class="Grid-cell u-size8of12 u-before2of12 u-after2of12">
+      <h4 class="Pad--l2"> Number of Articles <spam class="Small">({{Solution.payload.MockData.length}})</spam></h4>
+    </div>
+    <div class="Grid-cell u-size2of12 u-before2of12 Pad--t4 Pad--r2 Text--right Pad--b">
+      <label for="newAricle-titleLabel"
+        class="Accordion-newArticle--label"
+        for="newArticle-title">
+        Article Title
+      </label>
+    </div>
+    <div class="Grid-cell u-size6of12 u-after2of12 Pad--t4 Pad--b">
+      <input id="newArticle-title"
+        class="Accordion-newArticle--field Form-input"
+        type="text"
+        name="title"
+        ng-model="Solution.new.title"
+        placeholder="Article Title"
+        ng-required="true" />
+    </div>
+    <div class="Grid-cell u-size2of12 u-before2of12 Text--right Pad--r2 Pad--b">
+      <label id="newAricle-contentLabel"
+        for="newArticle-content"
+        class="Accordion-newArticle--label">
+        Article Content
+      </label>
+    </div>
+    <div class="Grid-cell u-size6of12 u-after2of12 Pad--b">
+      <textarea id="newArticle-content"
+        class="Accordion-newArticle--field Form-input"
+        name="content"
+        rows="4"
+        ng-model="Solution.new.content"
+        placeholder="Enter Article Content"
+        ng-required="true">
+      </textarea>
+    </div>
+    <div class="Grid-cell u-size6of12 u-before4of12 Text--center">
+      <button type="submit"
+        ng-disabled="Solution.newArticle.$invalid"
+        class="Button Button-submit">Create New Article
+      </button>
+    </div>
+    <div class="Grid-cell u-size8of12 u-before2of12 u-after2of12 Accordion-container">
+      <dl ng-repeat="items in Solution.payload.MockData">
+        <dt class="Accordion-selector"
+          ng-click="Solution.setActiveSection(items.id)">{{::items.title}}</dt>
+        <dd class="Accordion-detail"
+          ng-class="{'activeSection': Solution.isActiveSection(items.id),
+            'inactiveSection': !Solution.isActiveSection(items.id)}">
+          <p>{{::items.content}}</p>
+        </dd>
+      </dl>
+    </div>
   </div>
-  <div class="Grid-cell u-size2of12 u-before2of12">
-    <p>Number of Articles</p>
-  </div>
-  <div class="Grid-cell u-size6of12 u-after2of12">
-    <p>
-     {{Solution.payload.MockData.length}}
-    </p>
-  </div>
-  <div class="Grid-cell u-size2of12 u-before2of12">
-    <p>Add New Article</p>
-  </div>
-  <div class="Grid-cell u-size6of12 u-after2of12">
-    here comes the form
-  </div>
-  <div class="Grid-cell u-size8of12 u-before2of12 u-after2of12">
-    <dl ng-repeat="items in Solution.payload.MockData">
-      <dt ng-click="Solution.setActiveSection(items.id)">{{::items.title}}</dt>
-      <dd ng-class="{'activeSection': Solution.isActiveSection(items.id),
-          'inactiveSection': !Solution.isActiveSection(items.id)}">
-        <p>{{::items.content}}</p>
-      </dd>
-    </dl>
-  </div>
-</div>
-
-
+</form>

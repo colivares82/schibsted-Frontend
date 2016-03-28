@@ -32,15 +32,6 @@ angular.module('schibsted.frontendTest', ['ui.router'])
         }
       }
     })
-    .state('issues', {
-      parent: 'Base',
-      url: 'issues',
-      views: {
-        'content@Base': {
-          templateUrl: 'app/issues/issues.html'
-        }
-      }
-    })
     .state('requirements', {
       parent: 'Base',
       url: 'requirements',
